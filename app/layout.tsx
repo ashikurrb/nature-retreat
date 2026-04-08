@@ -41,7 +41,7 @@ export default function RootLayout({
       <body className="font-sans antialiased">
     
           <Toaster position="bottom-right" swipeDirections={["right"]} />
-          <main className="grow xl:max-w-360 xl:mx-auto">
+          <main className="grow">
             {children}
           </main>
       </body>
