@@ -5,31 +5,31 @@ import { Toaster } from "@/components/ui/sonner";
 import Header from "@/components/custom/Header/Header";
 import Footer from "@/components/custom/Footer/Footer";
 
-// export const metadata: Metadata = {
-//   title: "5points Academy - Your Education Partner in Bangladesh",
-//   description: "The Best Coaching Center in Mohammadpur, Dhaka, Bangladesh",
-//   openGraph: {
-//     title: "5points Academy - Your Education Partner in Bangladesh",
-//     description: "The Best Coaching Center in Mohammadpur, Dhaka, Bangladesh",
-//     type: "website",
-//     url: "https://5points-academy.com",
-//     siteName: "5points Academy",
-//     images: [
-//       {
-//         url: "/logo/logo/png",
-//         width: 1200,
-//         height: 630,
-//         alt: "5points Academy – The Best Coaching Center in Bangladesh",
-//       },
-//     ],
-//   },
-//   twitter: {
-//     card: "summary_large_image",
-//     title: "5points Academy - Your Education Partner in Bangladesh",
-//     description: "The Best Coaching Center in Mohammadpur, Dhaka, Bangladesh",
-//     images: ["/logo/logo.png"],
-//   },
-// };
+export const metadata: Metadata = {
+  title: "Nature Retreat - Your Eco-Friendly Escape",
+  description: "Discover the ultimate eco-friendly escape at Nature Retreat, where luxury meets sustainability. Experience serene surroundings, personalized service, and unforgettable memories in harmony with nature.",
+  openGraph: {
+    title: "Nature Retreat - Your Eco-Friendly Escape",
+    description: "Discover the ultimate eco-friendly escape at Nature Retreat, where luxury meets sustainability. Experience serene surroundings, personalized service, and unforgettable memories in harmony with nature.",
+    type: "website",
+    url: "https://thoughthubhq.com",
+    siteName: "Nature Retreat",
+    images: [
+      {
+        url: "/herobg3.png",
+        width: 1200,
+        height: 630,
+        alt: "Nature Retreat - Your Eco-Friendly Escape",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nature Retreat - Your Eco-Friendly Escape",
+    description: "Discover the ultimate eco-friendly escape at Nature Retreat, where luxury meets sustainability. Experience serene surroundings, personalized service, and unforgettable memories in harmony with nature.",
+    images: ["/herobg3.png"],
+  },
+};
 
 export default function RootLayout({
   children,
