@@ -72,10 +72,12 @@ export default function Header() {
         <div className="hidden md:flex space-x-4">
           <Button
             asChild
-            className="flex items-center gap-2 px-5 
+            className="flex items-center gap-2 px-5 h-12 text-md
             py-2.5 rounded-full border border-gray-200/80 bg-[#FFD846] hover:bg-[#e3c041] shadow-[0_0_30px_#FFD846] backdrop-blur-[6px] text-primary"
           >
-            <Link href="/login">Login <ArrowUpRight className="h-4 w-4" /></Link>
+            <Link href="/login">
+              Login <ArrowUpRight className="h-4 w-4" />
+            </Link>
           </Button>
         </div>
 
