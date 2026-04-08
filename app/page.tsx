@@ -7,7 +7,7 @@ import { revealVariants } from "@/lib/framer-animation";
 
 export default function Home() {
   return (
-    <motion.div 
+    <motion.div
       variants={revealVariants}
       initial="hidden"
       animate="show"
