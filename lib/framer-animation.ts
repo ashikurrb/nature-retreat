@@ -1,56 +1,21 @@
 import { Variants } from "framer-motion";
 
-// staggered container
 export const containerVariants: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15,
+      staggerChildren: 0.2,
     },
   },
 };
 
-// spring-up fade item
 export const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 30 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { type: "spring", stiffness: 50, damping: 15 },
-  },
-};
-
-// img scale-up reveal
-export const imageVariants: Variants = {
-  hidden: { opacity: 0, scale: 0.95 },
-  show: {
-    opacity: 1,
-    scale: 1,
-    transition: { type: "spring", stiffness: 50, damping: 15 },
-  },
-};
-
-// img background slide-out
-export const backImageVariants: Variants = {
-  hidden: { opacity: 0, scale: 0.85, x: -40, y: -30 },
-  show: {
-    opacity: 1,
-    scale: 1,
-    x: 0,
-    y: 0,
-    transition: { type: "spring", stiffness: 45, damping: 14, delay: 0.4 },
-  },
-};
-
-// img foreground pop-up
-export const frontImageVariants: Variants = {
-  hidden: { opacity: 0, scale: 0.9, y: 40 },
-  show: {
-    opacity: 1,
-    scale: 1,
-    y: 0,
-    transition: { type: "spring", stiffness: 55, damping: 15, delay: 0.2 },
+    transition: { type: "spring", stiffness: 40, damping: 15 },
   },
 };
 
@@ -59,7 +24,7 @@ export const textContainerVariants: Variants = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15,
+      staggerChildren: 0.1,
     },
   },
 };
@@ -69,16 +34,26 @@ export const textItemVariants: Variants = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { type: "spring", stiffness: 50, damping: 15 },
+    transition: { type: "spring", stiffness: 50, damping: 20 },
   },
 };
 
-//caption fade and rise on img/div
-export const captionVariants: Variants = {
-  hidden: { opacity: 0, y: 20 },
+export const floatVariants: Variants = {
+  show: {
+    y: [0, -8, 0],
+    transition: {
+      duration: 4,
+      repeat: Infinity,
+      ease: "easeInOut",
+    },
+  },
+};
+
+export const revealVariants: Variants = {
+  hidden: { opacity: 2, scale: 1.25 },
   show: {
     opacity: 1,
-    y: 0,
-    transition: { type: "spring", stiffness: 50, damping: 15, delay: 0.3 },
+    scale: 1,
+    transition: { duration: 1.5, ease: "easeOut" },
   },
 };
