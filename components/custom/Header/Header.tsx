@@ -1,4 +1,3 @@
-"use client";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
@@ -81,25 +80,23 @@ export default function Header() {
           </Button>
         </div>
 
-        {/* Mobile Navigation (Sheet) */}
         <div className="md:hidden flex items-center">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button
-                variant="ghost"
-                size="icon"
-                className="text-[#94a3b8] hover:text-white hover:bg-white/5 transition-colors"
+                size="lg"
+                variant="outline"
+                className="text-[#94fe00] font-bold bg-transparent border-none"
               >
-                <Menu className="h-10 w-10" />
+                <Menu className="h-15 w-15" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
 
             <SheetContent
               side="right"
-              className="w-[85vw] max-w-[320px] bg-[#060e0d]/95 backdrop-blur-xl border-l border-white/5 px-6 py-15 flex flex-col shadow-[-20px_0_40px_-10px_rgba(255,255,255,0.05)] [&>button]:text-[#94a3b8] hover:[&>button]:text-white [&>button]:transition-colors"
+              className="w-[85vw] max-w-[320px] bg-transparent backdrop-blur-3xl border-l border-[#F8E182]/20 px-6 py-15 flex flex-col shadow-[-20px_0_40px_-10px_rgba(251,228,150,0.1)] [&>button]:text-[#CABC95] hover:[&>button]:text-[#FFD846] [&>button]:transition-colors"
             >
-              {/* Minimal Mobile Links */}
               <nav className="flex flex-col gap-3 flex-1">
                 {navItems.map((item) => {
                   const isActive = pathname === item.href;
@@ -112,13 +109,13 @@ export default function Header() {
                       className={`flex items-center text-base font-medium transition-all duration-300 rounded-lg
                         ${
                           isActive
-                            ? "text-white border border-[#139889]/50 bg-[#139889]/10 px-4 py-3 shadow-[inset_0_0_20px_rgba(19,152,137,0.05)]"
-                            : "text-[#94a3b8] hover:text-white hover:translate-x-1 py-3 px-2"
+                            ? "text-[#FFD846] border border-[#CBA153]/50 bg-[#CBA153]/10 px-4 py-3 shadow-[inset_0_0_20px_rgba(203,161,83,0.1)]"
+                            : "text-[#CABC95] hover:text-[#FFD846] hover:translate-x-1 py-3 px-2"
                         }
                       `}
                     >
                       {isActive && (
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#139889] mr-3 shadow-[0_0_8px_rgba(19,152,137,0.8)]" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#FFD846] mr-3 shadow-[0_0_8px_#FFD846]" />
                       )}
                       {item.name}
                     </Link>
@@ -126,20 +123,19 @@ export default function Header() {
                 })}
               </nav>
 
-              {/* Sleek Mobile Footer Actions */}
-              <div className="flex flex-col gap-3 mt-auto pt-6 border-t border-white/5">
+              <div className="flex flex-col gap-3 mt-auto pt-6 border-t border-[#F8E182]/20">
                 <Button
                   variant="ghost"
                   asChild
                   onClick={() => setIsOpen(false)}
-                  className="w-full text-[#94a3b8] hover:text-white hover:bg-white/5 font-medium transition-colors duration-300 h-11 text-sm rounded-lg"
+                  className="w-full text-[#CABC95] hover:text-[#FFD846] hover:bg-black/5 dark:hover:bg-white/5 font-medium transition-colors duration-300 h-11 text-sm rounded-lg"
                 >
-                  <Link href="/register">Login</Link>
+                  <Link href="/login">Login</Link>
                 </Button>
                 <Button
                   asChild
                   onClick={() => setIsOpen(false)}
-                  className="w-full text-white bg-[#0A2422] hover:bg-[#139889] font-medium transition-colors duration-300 h-11 text-sm rounded-lg shadow-[0_10px_15px_-3px_rgba(255,255,255,0.05)]"
+                  className="w-full text-white font-semibold tracking-wide bg-linear-to-b from-[#CBA153] to-[#836222] border border-[#F8E182]/80 hover:brightness-110 shadow-[0_0_20px_rgba(203,161,83,0.4)] transition-all duration-300 h-11 text-sm rounded-full"
                 >
                   <Link href="/register">Register</Link>
                 </Button>

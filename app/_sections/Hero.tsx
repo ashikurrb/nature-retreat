@@ -18,7 +18,7 @@ export default function Hero() {
       variants={containerVariants}
       initial="hidden"
       animate="show"
-      className="max-w-360 mx-auto flex flex-col justify-center items-center mt-10 md:mt-3 px-6 md:px-12 lg:px-20 2xl:px-24"
+      className="max-w-360 mx-auto flex flex-col justify-center items-center mt-10 md:mt-20 xl:mt-3 px-6 md:px-12 lg:px-20 2xl:px-24"
     >
       <motion.div variants={itemVariants}>
         <motion.div variants={floatVariants} animate="show">
