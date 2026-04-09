@@ -5,16 +5,17 @@ import { Button } from "@/components/ui/button";
 import { playfairDisplay } from "@/lib/font";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { 
-  containerVariants, 
-  itemVariants, 
-  textItemVariants, 
-  floatVariants 
+import {
+  containerVariants,
+  itemVariants,
+  textItemVariants,
+  floatVariants,
 } from "@/lib/framer-animation";
+import Link from "next/link";
 
 export default function Hero() {
   return (
-    <motion.div 
+    <motion.div
       variants={containerVariants}
       initial="hidden"
       animate="show"
@@ -23,7 +24,7 @@ export default function Hero() {
       <motion.div variants={itemVariants}>
         <motion.div variants={floatVariants} animate="show">
           <Badge className="inline-flex items-center gap-3 rounded-full border border-[#FFE479] bg-[rgba(92,78,22,0.5)] shadow-[0_0_30px_#FBE496] backdrop-blur-md hover:shadow-[0_0_40px_#FBE496] transition-all duration-300 p-5">
-            <div className="md:flex items-center hidden">
+            {/* <div className="md:flex items-center hidden">
               <Image
                 src="https://placehold.co/28x28"
                 alt="user"
@@ -45,7 +46,7 @@ export default function Hero() {
                 height={28}
                 className="-ml-2 rounded-full border-2 border-white"
               />
-            </div>
+            </div> */}
 
             <span className="text-[#FFE169] text-bold md:text-[16px] text-xs leading-6">
               Voted #1 Luxury Eco-Resort by Elite Travelers
@@ -55,7 +56,7 @@ export default function Hero() {
       </motion.div>
 
       <div className="mt-[25.5px]">
-        <motion.h1 
+        <motion.h1
           variants={textItemVariants}
           className="text-center font-medium text-[#FFD846] leading-snug md:leading-[1.1]"
         >
@@ -71,8 +72,8 @@ export default function Hero() {
             From Arrival to Departure
           </span>
         </motion.h1>
-        
-        <motion.p 
+
+        <motion.p
           variants={textItemVariants}
           className="text-[#CABC95] text-[15px] md:text-[24px] md:leading-7 max-w-144.5 mx-auto mt-2 text-center"
         >
@@ -95,7 +96,12 @@ export default function Hero() {
             transition-all duration-300 ease-in-out
           "
         >
-          Reserve Your Escape
+          <Link
+            href="/booking"
+            className="w-full h-full flex items-center justify-center"
+          >
+            Book Your Stay
+          </Link>
         </Button>
       </motion.div>
     </motion.div>
